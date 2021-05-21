@@ -61,6 +61,9 @@ const Login = (props) => {
       if (user) {
         clearInputs();
         setUser(user);
+        user.getIdToken().then(function (idToken) {
+          localStorage.setItem("idToken", idToken);
+        });
       } else {
         setUser("");
       }

@@ -4,6 +4,7 @@ import fb from "../firebase.config";
 const Landing = (props) => {
   const handleLogout = () => {
     console.log("logout");
+    localStorage.removeItem("idToken");
     fb.auth().signOut();
   };
 
