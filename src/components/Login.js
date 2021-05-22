@@ -24,9 +24,6 @@ const Login = (props) => {
     clearErrors();
     fb.auth()
       .signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        console.log("user", user);
-      })
       .catch((error) => {
         switch (error.code) {
           case "auth/invalid-email":

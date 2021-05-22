@@ -1,4 +1,4 @@
-# Deployment Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/2c79ec77-49e5-4e8d-a837-1f158795cd1c/deploy-status)](https://app.netlify.com/sites/react-push-notif-fcc73f/deploys)
+# Deployment Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/87f9e9f0-d7de-4a2b-99a7-7233f8dc296b/deploy-status)](https://app.netlify.com/sites/firebase-login-pushnotificatons-e8431da/deploys)
 
 ## Steps to test the notifications
 
@@ -10,8 +10,7 @@ To do this in Postman, you simply have to set the following:
 4.Authorization(server key) = key=< Your FCM Server Key > (See your Firebase Console's Cloud Messaging Tab)
 5.Set the payload parameters in the Body.
 for eg:
-`{ "notification": { "title": "Firebase", "body": "Firebase is awesome", "click_action": "http://localhost:3000/", "icon": "http://url-to-an-icon/icon.png" }, "to": "USER TOKEN" // copy this from browser console. }`
-6. Send the request to <https://fcm.googleapis.com/fcm/send> 7. If the request is a successful, the API will written a `200 status` alongwith a `messenge_id`
+`{ "notification": { "title": "Firebase", "body": "Firebase is awesome", "click_action": "http://localhost:3000/", "icon": "http://url-to-an-icon/icon.png" }, "to": "USER TOKEN" // copy this from browser console. }` 6. Send the request to <https://fcm.googleapis.com/fcm/send> 7. If the request is a successful, the API will written a `200 status` alongwith a `messenge_id`
 
 ## Available Scripts
 
