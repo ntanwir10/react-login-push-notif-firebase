@@ -3,6 +3,7 @@ import fb from "../firebase.config";
 
 const Login = (props) => {
   let { user, setUser } = props;
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -77,13 +78,14 @@ const Login = (props) => {
   return (
     <div className="login">
       <div className="loginContainer">
-        <label>Username</label>
+        <label>Email</label>
         <input
           type="text"
           value={email}
           autoFocus
           required
           onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
         />
         <p className="errorMsg">{emailError}</p>
         <label>Password</label>
@@ -92,6 +94,7 @@ const Login = (props) => {
           value={password}
           required
           onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
         />
         <p className="errorMsg">{passwordError}</p>
         <div className="btnContainer">

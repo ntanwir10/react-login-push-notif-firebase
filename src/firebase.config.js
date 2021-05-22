@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import "firebase/messaging";
 
 var firebaseConfig = {
   apiKey: "AIzaSyCXR2c6nSqBpyr6OFijfQ9dJPHE4VWRDZ4",
@@ -12,3 +13,17 @@ var firebaseConfig = {
 const fb = firebase.initializeApp(firebaseConfig);
 
 export default fb;
+
+export const askForPermissioToReceiveNotifications = async () => {
+  try {
+    const messaging = firebase.messaging();
+
+    await messaging.requestPermission();
+    const token = await messaging.getToken();
+    console.log("user token: ", token);
+
+    return token;
+  } catch (error) {
+    console.error(error);
+  }
+};

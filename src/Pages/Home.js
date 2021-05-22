@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Login from "../components/Login";
-import Landing from "../Pages/Landing";
+import Landing from "../components/Landing";
 
 function Home(props) {
   const [user, setUser] = useState();
